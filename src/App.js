@@ -13,16 +13,31 @@ class Hello extends Component{
     return <h2>{this.props.title}</h2>
   }
 }
+class Text extends Component{
+  render(){
+    return (
+      <div>
+        <p>{this.props.text}</p>
+        <p>{this.props.number}</p>
+        <p>{this.props.boolean}</p>
+      </div>
+    )
+  }
+}
 
-function App() {
-  return (
+class App extends Component{
+  render () {
+    return(
+  
     <div className="App">
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
          <Hello title='Hello from props'/>
       </div>
-    </div>
-  );
+        <Text number={2} text='Texto en string' boolean={true}/>
+      </div>
+   );
+  }
 }
 
-export default App;
+ export default App;
