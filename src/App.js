@@ -20,6 +20,7 @@ class Text extends Component{
     return (
       <div>
         <p>{mappedNumbers.join(', ')}</p>
+        <p>{this.props.objectWithInfo.key}</p>
         {/* <p>{this.props.text}</p>
         <p>{this.props.number}</p>
         <p>{textoSegunBool}</p> */}
@@ -39,6 +40,7 @@ class App extends Component{
       </div>
         <Text 
         arrayOfNumbers={[2,3,10]}
+        objectWithInfo={{key : 'First value', key2 : 'otherValue'}}
         isActivated
         number={2} 
         text='Texto en string'  />
